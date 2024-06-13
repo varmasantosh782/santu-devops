@@ -1,0 +1,12 @@
+ Download and install key for connecting jenkins repository 
+  rpm --import http://pkg.jenkins-ci.org/redhat-rc/jenkins-ci.org.key
+
+4. Install rpm  & verify rpm package
+       rpm -ivh jenkins-2.426.2-1.1.noarch.rpm
+       rpm -qa | grep -i jenkins
+
+5. Start & Enable and check status of Jenkins service :
+          systemctl daemon-reload
+          systemctl enable jenkins  
+          systemctl start jenkins  
+          systemctl status jenkins   
